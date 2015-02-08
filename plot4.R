@@ -10,7 +10,7 @@ data$Date<-as.Date(data$Date, format = "%d/%m/%Y")
 ## Filter the data by date
 data<-data[data$Date == "2007-02-01" | data$Date == "2007-02-02",]
 ## Plot the chart1
-par(mfrow = c(2, 2), mar = c(4, 4, 2, 1), cex = 0.5)
+par(mfrow = c(2, 2), mar = c(5, 4, 2, 2), cex = 0.6, bg = "transparent")
 plot(data$Time, data[,3], type = "n", main = NULL, xlab = "", 
      ylab = "Global Active Power")
 lines(data$Time, data[,3], type= "l")
@@ -25,7 +25,7 @@ lines(data$Time, data[,7], type= "l")
 lines(data$Time, data[,8], type= "l", col = "red")
 lines(data$Time, data[,9], type= "l", col = "blue")
 legend("topright", lty=1, col = c("black", "red", "blue"), 
-       legend = colnames(data)[7:9])
+       legend = colnames(data)[7:9], cex = 0.8)
 ## Plot the chart4
 plot(data$Time, data[,4], type = "n", main = NULL, xlab = "datetime", 
      ylab = "Global_reactive_power")

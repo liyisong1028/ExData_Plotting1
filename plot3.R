@@ -10,7 +10,7 @@ data$Date<-as.Date(data$Date, format = "%d/%m/%Y")
 ## Filter the data by date
 data<-data[data$Date == "2007-02-01" | data$Date == "2007-02-02",]
 ## Plot the chart
-par(cex = 0.7)
+par(cex = 0.8, bg = "transparent")
 plot(data$Time, data[,7], type = "n", main = NULL, xlab = "", 
      ylab = "Energy sub metering")
 lines(data$Time, data[,7], type= "l")
